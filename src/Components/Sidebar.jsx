@@ -19,12 +19,12 @@ const Sidebar = () => {
     onClick={() => setActiveLink(1)}>
 
     <Link to="/dashboard" className='sidebar-link'>
-    <FaAddressCard className='icon' />Show Contact</Link>
+    <FaAddressCard className='icon' />Show Details</Link>
     </div>
     <div className={`sidebar-item ${activeLink === 2 ? " active " : ""}`}
       onClick={() => setActiveLink(2)}>
     <Link to="/dashboard/add-contact" className='sidebar-link'>
-    <FaRegAddressCard className='icon' />Add Contact</Link>
+    <FaRegAddressCard className='icon' />Add Details</Link>
     </div>
     <div className={`sidebar-item ${activeLink === 3 ? " active " : ""}`}
       onClick={() => setActiveLink(3)}>
