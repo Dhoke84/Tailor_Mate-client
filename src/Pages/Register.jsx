@@ -27,7 +27,7 @@ const Register = () => {
         const errs = Validation(values)
         setErrors(errs)
         if(errs.name === "" && errs.email === "" && errs.password === ""){
-            axios.post('http://127.0.0.1:3000/tailormsyt/register', values).then((res)=>{
+            axios.post('https://tailor-mate-client.vercel.app/tailormsyt/register', values).then((res)=>{
                 if(res.data.success){
                     toast.success("Account Created Successfully", {
                         position:"top-right",

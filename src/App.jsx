@@ -64,7 +64,7 @@ element: <Logout/>
 const App = () => {
   const[user, setUser] = useState();
   useEffect(() =>{
-    axios.get('http://127.0.0.1:3000/tailormsyt/verify',{
+    axios.get('https://tailor-mate-client.vercel.app/tailormsyt/verify',{
       headers: {
         Authorization: `Berear ${localStorage.getItem('token')}`
       }
