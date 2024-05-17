@@ -29,7 +29,7 @@ const EditContact = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault()
-        axios.put('https://tailor-mate-client.vercel.app/tailormsyt/update-contact/'+id, values, {
+        axios.put('https://tailor-mate-server.vercel.app/tailormsyt/update-contact/'+id, values, {
             headers: {
               Authorization: `Berear ${localStorage.getItem('token')}`
             }
@@ -55,7 +55,7 @@ const EditContact = () => {
 
     useEffect(() =>{
 
-        axios.get("https://tailor-mate-client.vercel.app/tailormsyt/contact/"+id,  {
+        axios.get("https://tailor-mate-server.vercel.app/tailormsyt/contact/"+id,  {
                 headers: {
                   Authorization: `Berear ${localStorage.getItem('token')}`
                 }

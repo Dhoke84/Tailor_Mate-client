@@ -39,7 +39,7 @@ const Contacts = () => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`https://tailor-mate-client.vercel.app/tailormsyt/contact/${id}`, {
+        axios.delete(`https://tailor-mate-server.vercel.app/tailormsyt/contact/${id}`, {
           // axios.delete(`http://localhost:3001/tailormsyt/contact/${id}`, {
           headers: {
             Authorization: `Berear ${localStorage.getItem('token')}`
@@ -115,7 +115,7 @@ const Contacts = () => {
   ]
   useEffect(() =>{
     setLoading(true)
-    axios.get('https://tailor-mate-client.vercel.app/tailormsyt/contacts',  {
+    axios.get('https://tailor-mate-server.vercel.app/tailormsyt/contacts',  {
             headers: {
               Authorization: `Berear ${localStorage.getItem('token')}`
             }

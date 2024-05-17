@@ -28,7 +28,7 @@ const {user, setUser} = useContext(UserContext)
         const errs = Validation(values)
         setErrors(errs)
         if( errs.email === "" && errs.password === ""){
-            axios.post('https://tailor-mate-client.vercel.app/tailormsyt/login', values).then(res=>{
+            axios.post('https://tailor-mate-server.vercel.app/tailormsyt/login', values).then(res=>{
                 if(res.data.success){
                     toast.success("Login Successfully", {
                         position:"top-right",
