@@ -28,7 +28,7 @@ const AddContact = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault()
-        axios.post('http://127.0.0.1:3000/tailormsyt/add-contact', values, {
+        axios.post('https://tailor-mate-server-api.vercel.app/tailormsyt/add-contact', values, {
             headers: {
               Authorization: `Berear ${localStorage.getItem('token')}`
             }
