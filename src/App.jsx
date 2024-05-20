@@ -15,6 +15,7 @@ import Logout from './Pages/Logout';
 import ProtectedRoutes from './Components/ProtectedRoutes';
 import NotFound from './Pages/NotFound';
 
+
 export const UserContext = createContext(null)
 
 
@@ -64,7 +65,7 @@ element: <Logout/>
 const App = () => {
   const[user, setUser] = useState();
   useEffect(() =>{
-    axios.get('https://tailor-mate-server.vercel.app/tailormsyt/verify',{
+    axios.get('http://localhost:3000/tailormsyt/verify',{
       headers: {
         Authorization: `Berear ${localStorage.getItem('token')}`
       }

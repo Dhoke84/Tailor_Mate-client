@@ -28,7 +28,7 @@ const {user, setUser} = useContext(UserContext)
         const errs = Validation(values)
         setErrors(errs)
         if( errs.email === "" && errs.password === ""){
-            axios.post('https://tailor-mate-server.vercel.app/tailormsyt/login', values).then(res=>{
+            axios.post('http://localhost:3000/tailormsyt/login', values).then(res=>{
                 if(res.data.success){
                     toast.success("Login Successfully", {
                         position:"top-right",
@@ -79,6 +79,8 @@ const {user, setUser} = useContext(UserContext)
               )  
             }
             <button className='form-btn'>Login</button>
+            <br></br>
+          
 <p> Don't Have Account? <Link to= '/register'>Register</Link></p>
 
         </form>
